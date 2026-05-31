@@ -1,14 +1,27 @@
-import { DarkThemeToggle } from "flowbite-react";
+import Alert from "./exercise/Alert";
+import Badge from "./exercise/Badge";
+import CustomButton from "./exercise/CustomButton";
+import Form from "./exercise/Form";
+import ImgCard from "./exercise/ImgCard";
+import InfoCard from "./exercise/InfoCard";
+import UserCard from "./exercise/UserCard";
 
 export default function App() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-white px-4 py-24">
-      <div className="">
-        <DarkThemeToggle />
-      </div>
-      <div className="bg-red-200 p-4 text-3xl text-blue-800 dark:bg-blue-800 dark:text-red-200">
-        Text changes when click on DarkThemeTOggle Componenet
-      </div>
+    <main className="grid grid-cols-1 gap-12 p-10">
+      <CustomButton />
+      <hr />
+      <InfoCard />
+      <hr />
+      <ImgCard />
+      <hr />
+      <Form />
+      <hr />
+      <Alert />
+      <hr />
+      <Badge />
+      <hr />
+      <UserCard />
     </main>
   );
 }
