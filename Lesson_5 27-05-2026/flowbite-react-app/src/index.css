@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@import "flowbite-react/plugin/tailwindcss";
+@source "../.flowbite-react/class-list.json";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+.btn {
+  @apply rounded-2xl bg-red-600 p-3 text-white;
+}
