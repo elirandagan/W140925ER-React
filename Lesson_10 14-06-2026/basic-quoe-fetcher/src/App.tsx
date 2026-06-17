@@ -1,12 +1,14 @@
 import "./App.css";
-import NameFetcher from "./components/NameFetcher";
-import QuoteFetcher from "./components/QuoteFetcher";
+import PostFetcher from "./components/PostFetcher";
+// import NameFetcher from "./components/NameFetcher";
+// import QuoteFetcher from "./components/QuoteFetcher";
 
 function App() {
   return (
     <div>
-      <NameFetcher />
-      <QuoteFetcher />
+      {/* <NameFetcher /> */}
+      {/* <QuoteFetcher /> */}
+      <PostFetcher />
     </div>
   );
 }

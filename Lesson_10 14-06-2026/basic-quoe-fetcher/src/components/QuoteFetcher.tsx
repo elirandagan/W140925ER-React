@@ -1,8 +1,9 @@
-import axios from "axios";
+// import axios from "axios";
+import { ApiService } from "../services/api-service";
 import { useEffect, useState } from "react";
 
 function QuoteFetcher() {
-  const [quote, setQuote] = useState<string>("");
+  const [quote, setQuote] = useState<string>("Loading..");
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<string>("");
 
@@ -10,7 +11,7 @@ function QuoteFetcher() {
     const fetchRandomQuote = async () => {
       try {
         setIsLoading(true);
-        const response = await axios.get("http://api.quotable.io/random");
+        const response = await ApiService.getRandomQuote();
         if (response?.data) {
           setQuote(response.data?.content);
         }
