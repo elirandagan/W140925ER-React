@@ -10,11 +10,18 @@ const _axios = axios.create({
   headers: {
     "Content-Type": "application/json",
     Accept: "application/json",
+    // Authorization:
+    //   "Bearer slkdfghjsdlkfghjdljfghs;dlfjghs;dljfhgsdljkfhgsd;kjfhgsdkl;jfgh",
   },
 });
 
 export const ApiService = {
   getRandomQuote: () => _axios.get<GetQuoteResponse>("random"),
   createPost: (newPost: PostRequest) =>
-    _axios.post<PostResponse>("posts", newPost),
+    _axios.post<PostResponse>("posts", newPost, {
+      // headers: {
+      //   Authorization:
+      //     "Bearer slkdfghjsdlkfghjdljfghs;dlfjghs;dljfhgsdljkfhgsd;kjfhgsdkl;jfgh",
+      // },
+    }),
 };
